@@ -1,6 +1,6 @@
 # Predict Number of Scanned Receipts for Each Month of 2022
 
-Click [here](https://yuxianshi-predict-total-scan-monthly-prediction-wmwam9.streamlit.app/) for the web app of the prediction. 
+Click [here](https://yuxianshi-predict-total-scan-monthly-prediction-wmwam9.streamlit.app/) for the web app of the predictions. 
 
 Specially, this app allows users to update the prediction by filling in the monthly counts for the first few months of 2022 (if available), e.g., the observed counts in January can be used to update the predictions for the rest of the months.
 
