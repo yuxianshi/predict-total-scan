@@ -1,6 +1,6 @@
 # Predict Number of Scanned Receipts for Each Month of 2022
 
-For the web app of the prediction, please click [here](https://yuxianshi-predict-total-scan-monthly-prediction-wmwam9.streamlit.app/).
+For the web app of the prediction, please click [here](https://yuxianshi-predict-total-scan-monthly-prediction-wmwam9.streamlit.app/). Specially, this app allows users to update the prediction by filling in the monthly counts for the first few months of 2022 (if available), e.g., the observed counts in January can be used to update the predictions for the rest of the months.
 
 * The process of modeling (three models have been explored) is presented in Modeling.ipynb.
 * Dockerfile can be used to build the docker container that established the web app. Copy Dockerfile into your directory and, inside this directory, run the following commands.
