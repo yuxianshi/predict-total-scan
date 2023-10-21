@@ -10,7 +10,7 @@ Specially, this app allows users to update the prediction by filling in the mont
 docker pull sean384/predict-total-scan
 docker run -d -p 8501:8501 sean384/predict-total-scan
 ```
-After these steps, you should be able to access the app at http://localhost:8501/ 
+  After these steps, you should be able to access the app at http://localhost:8501/ 
 * Alternatively, you may use the Dockerfile in this repo to established the web app. Copy Dockerfile into your directory and, inside this directory, run the following commands.
 ```
   docker pull ubuntu:23.10
