@@ -1,8 +1,6 @@
-altair
 numpy
 pandas
 Pillow
 matplotlib
 scipy
-pydeck
 streamlit
