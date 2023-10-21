@@ -181,7 +181,8 @@ def run():
     Y = genY(df_2021)
 
     df_2022_month = df_2022
-    df_2022_month.loc[:,'intercept'] = 1
+    #df_2022_month.loc[:,'intercept'] = 1
+    df_2022_month = df_2022_month.assign(intercept = np.ones(365))
     df_2022_month = df_2022_month.groupby(['month'])[['intercept'] + predictors].sum()
     X_month = df_2022_month.to_numpy()
 
