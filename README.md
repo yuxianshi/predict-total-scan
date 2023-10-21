@@ -4,9 +4,11 @@ For the web app of the prediction, please click [here](https://yuxianshi-predict
 
 * The process of modeling (three models have been explored) is presented in Modeling.ipynb.
 * Dockerfile can be used to build the docker container that established the web app. Copy Dockerfile into your directory and, inside this directory, run the following commands.
-  - docker pull ubuntu:23.10
-  - docker build . -t app
-  - docker run -d -p 8501:8501 app
+  ```
+  docker pull ubuntu:23.10
+  docker build . -t app
+  docker run -d -p 8501:8501 app
+  ```
   After these steps, you should be able to access the app at http://localhost:8501/ 
 
 #### Summary
