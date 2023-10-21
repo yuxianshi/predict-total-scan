@@ -1,8 +1,25 @@
-# Welcome to streamlit
+# Predict Number of Scanned Receipts for Each Month of 2022
 
-This is the app you get when you run `streamlit hello`, extracted as its own app.
+For the web app of the prediction, please click [here](https://yuxianshi-predict-total-scan-monthly-prediction-wmwam9.streamlit.app/).
 
-Edit [Hello.py](./Hello.py) to customize this app to your heart's desire. ❤️
+* The process of modeling (three models have been explored) is presented in Modeling.ipynb.
+* Dockerfile can be used to build the docker container that established the web app. Copy Dockerfile into your directory and, inside this directory, run the following commands.
+  - docker pull ubuntu:23.10
+  - docker build . -t app
+  - docker run -d -p 8501:8501 app
+  After these steps, you should be able to access the app at http://localhost:8501/ 
 
-Check it out on [Streamlit Community Cloud](https://st-hello-app.streamlit.app/)
+#### Summary
 
+**Methods**: Three methods have been experimented with, from simpler model to more complex model.
+* Linear Regregssion Model (LR) 
+    - variable selection conducted here.
+* Auto-Regressive Time Series Model AR(3)
+    - this model uses the same covariates (predictors) as those selected in the LR model, but is more complex, since it models the correlation of $y_t$ and $y_{t-3}$ ($y_t$ is the count on $t$th day).
+* Simple Fully Connected Neural Network Model (NN)
+    - this model uses the same covariates (predictors) as those selected in the LR model, but is more complex, since it is non-linear and considers interactions among covariates.
+    
+**Conclusion**: The AR(3) model demonstrate best test data prediction accuracy, with LR performs slightly suboptimal but similarly. The LR model, however, allows straight forward way for inference (calculating the confidence intervel) at month level and also supports update of the trained model with monthly observations in 2022 (e.g., if at the time this model is used, monthly count of January of 2022 is available). Therefore, the final app include a combination of the AR(3) model and the LR model.   
+
+**Auxillary Data:**
+Holidays in USA -- https://www.kaggle.com/datasets/jeremygerdes/us-federal-pay-and-leave-holidays-2004-to-2100-csv
