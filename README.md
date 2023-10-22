@@ -5,7 +5,7 @@ Click [here](https://yuxianshi-predict-total-scan-monthly-prediction-wmwam9.stre
 Specially, this app allows users to update the prediction by filling in the monthly counts for the first few months of 2022 (if available), e.g., the observed counts in January can be used to update the predictions for the rest of the months.
 
 * The process of modeling (three models have been explored) is presented in Modeling.ipynb.
-* The docker container for the web app has been published in Docker Hub at [here](https://hub.docker.com/repository/docker/sean384/predict-total-scan/general). You can pull and run the container by
+* The docker container for the web app has been published in Docker Hub [here](https://hub.docker.com/repository/docker/sean384/predict-total-scan/general). You can pull and run the container by
 ```
 docker pull sean384/predict-total-scan
 docker run -d -p 8501:8501 sean384/predict-total-scan
